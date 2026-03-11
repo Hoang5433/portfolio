@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alex Nguyen – Web Developer</title>
+  <title>Hoang Dinh Phu Quy – Web Developer</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -33,7 +33,6 @@
       padding: 80px 24px 120px;
     }
 
-    /* HEADER */
     header { margin-bottom: 56px; }
 
     .avatar {
@@ -70,6 +69,7 @@
       color: var(--accent);
       text-decoration: none;
       margin-right: 18px;
+      margin-bottom: 6px;
       border-bottom: 1px solid transparent;
       transition: border-color 0.15s;
     }
@@ -83,14 +83,12 @@
       margin-top: 22px;
     }
 
-    /* DIVIDER */
     hr {
       border: none;
       border-top: 1px solid var(--subtle);
       margin: 48px 0;
     }
 
-    /* SECTION LABEL */
     .section-title {
       font-family: var(--mono);
       font-size: 0.7rem;
@@ -150,10 +148,19 @@
       font-size: 0.88rem;
       color: #555;
       line-height: 1.7;
-      margin-bottom: 12px;
+      margin-bottom: 4px;
     }
 
-    .project-links { display: flex; gap: 16px; }
+    .project-desc ul {
+      padding-left: 16px;
+      margin-top: 6px;
+    }
+
+    .project-desc li {
+      margin-bottom: 3px;
+    }
+
+    .project-links { display: flex; gap: 16px; margin-top: 12px; }
     .project-links a {
       font-family: var(--mono);
       font-size: 0.73rem;
@@ -183,18 +190,18 @@
       line-height: 1.85;
     }
 
-    /* EXPERIENCE */
-    .exp { margin-bottom: 26px; }
-    .exp-header {
+    /* EDUCATION */
+    .edu { margin-bottom: 8px; }
+    .edu-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
-    .exp-title { font-size: 0.9rem; font-weight: 500; }
-    .exp-period { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
-    .exp-company { font-size: 0.83rem; color: var(--muted); margin-bottom: 5px; }
-    .exp-desc { font-size: 0.86rem; color: #555; line-height: 1.7; }
+    .edu-school { font-size: 0.9rem; font-weight: 500; }
+    .edu-period { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
+    .edu-degree { font-size: 0.83rem; color: var(--muted); margin-bottom: 4px; }
+    .edu-desc { font-size: 0.86rem; color: #555; line-height: 1.7; }
 
     /* CONTACT */
     .contact-line { font-size: 0.9rem; color: #444; line-height: 1.85; }
@@ -206,23 +213,19 @@
     }
     .contact-line a:hover { border-color: var(--accent); }
 
-    /* FOOTER */
     footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--subtle); }
     footer p { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
 
-    /* FADE IN */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to   { opacity: 1; transform: translateY(0); }
     }
     .container > * { animation: fadeIn 0.45s ease both; }
-    header { animation-delay: 0s; }
-    hr { animation-delay: 0.06s; }
 
     @media (max-width: 480px) {
       .skills-list { grid-template-columns: 1fr; }
       .project-header { flex-direction: column; gap: 2px; }
-      .exp-header { flex-direction: column; gap: 2px; }
+      .edu-header { flex-direction: column; gap: 2px; }
     }
   </style>
 </head>
@@ -231,16 +234,17 @@
 
   <header>
     <div class="avatar">👨‍💻</div>
-    <h1>Alex Nguyen</h1>
+    <h1>Hoang Dinh Phu Quy</h1>
     <p class="tagline">Web Developer · Ho Chi Minh City, Vietnam</p>
     <div class="links">
-      <a href="mailto:alex@example.com">Email</a>
-      <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="#" target="_blank">Resume (PDF)</a>
+      <a href="mailto:hoangquy3001@gmail.com">Email</a>
+      <a href="https://github.com/Hoang5433" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/ho%C3%A0ng-qu%C3%BD-2577762b6/" target="_blank">LinkedIn</a>
+      <a href="https://www.maintaindev.id.vn" target="_blank">Website</a>
+      <a href="cv.pdf" target="_blank">Resume (PDF)</a>
     </div>
     <p class="bio">
-      Full-stack web developer with 3+ years building products people actually use. I care about clean code, fast load times, and shipping things that work. Currently open to new opportunities.
+      Software Engineering student at Saigon University, passionate about building full-stack web applications. Currently working on real-world projects involving microservices, real-time systems, and modern web stacks.
     </p>
   </header>
 
@@ -250,80 +254,49 @@
 
   <div class="project">
     <div class="project-header">
-      <span class="project-name">ShopFlow</span>
-      <span class="project-year">2024</span>
+      <span class="project-name">Zerus Coffee</span>
+      <span class="project-year">Feb 2026 – Present</span>
+    </div>
+    <div class="project-stack">
+      <span class="stack-tag">TypeScript</span>
+      <span class="stack-tag">Next.js</span>
+      <span class="stack-tag">Laravel</span>
+      <span class="stack-tag">Docker</span>
+      <span class="stack-tag">Redis</span>
+      <span class="stack-tag">Filament</span>
+      <span class="stack-tag">GSAP</span>
+    </div>
+    <div class="project-desc">
+      Full-stack e-commerce web app for a coffee store.
+      <ul>
+        <li>OAuth authentication with cart merging for guest and logged-in users</li>
+        <li>Async background jobs via Redis queues</li>
+        <li>Admin dashboard with Filament for product, order, and inventory management</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-name">Instagram Clone</span>
+      <span class="project-year">Sep 2025 – Present</span>
     </div>
     <div class="project-stack">
       <span class="stack-tag">Next.js</span>
-      <span class="stack-tag">Node.js</span>
-      <span class="stack-tag">PostgreSQL</span>
-      <span class="stack-tag">Stripe</span>
-      <span class="stack-tag">AWS</span>
-    </div>
-    <p class="project-desc">
-      Full-featured e-commerce platform with inventory management, Stripe payments, and a real-time analytics dashboard. Handles 5,000+ monthly active users with sub-200ms API response times.
-    </p>
-    <div class="project-links">
-      <a href="#" target="_blank">Live demo</a>
-      <a href="#" target="_blank">GitHub</a>
-    </div>
-  </div>
-
-  <div class="project">
-    <div class="project-header">
-      <span class="project-name">ChatSpace</span>
-      <span class="project-year">2023</span>
-    </div>
-    <div class="project-stack">
-      <span class="stack-tag">React</span>
-      <span class="stack-tag">Socket.io</span>
-      <span class="stack-tag">Redis</span>
+      <span class="stack-tag">Spring Boot</span>
       <span class="stack-tag">Docker</span>
+      <span class="stack-tag">WebSocket</span>
+      <span class="stack-tag">ElasticSearch</span>
+      <span class="stack-tag">Redis</span>
+      <span class="stack-tag">RabbitMQ</span>
     </div>
-    <p class="project-desc">
-      Real-time messaging app with group rooms, file sharing, and push notifications. Built a custom presence system supporting 500 concurrent connections on a single server.
-    </p>
-    <div class="project-links">
-      <a href="#" target="_blank">Live demo</a>
-      <a href="#" target="_blank">GitHub</a>
-    </div>
-  </div>
-
-  <div class="project">
-    <div class="project-header">
-      <span class="project-name">DevMetrics CLI</span>
-      <span class="project-year">2023</span>
-    </div>
-    <div class="project-stack">
-      <span class="stack-tag">Node.js</span>
-      <span class="stack-tag">GitHub API</span>
-      <span class="stack-tag">SQLite</span>
-    </div>
-    <p class="project-desc">
-      CLI tool that aggregates GitHub activity across repos and generates weekly productivity reports. 200+ stars on GitHub.
-    </p>
-    <div class="project-links">
-      <a href="#" target="_blank">npm</a>
-      <a href="#" target="_blank">GitHub</a>
-    </div>
-  </div>
-
-  <div class="project">
-    <div class="project-header">
-      <span class="project-name">Tasklane</span>
-      <span class="project-year">2022</span>
-    </div>
-    <div class="project-stack">
-      <span class="stack-tag">Vue 3</span>
-      <span class="stack-tag">FastAPI</span>
-      <span class="stack-tag">MongoDB</span>
-    </div>
-    <p class="project-desc">
-      Lightweight Kanban board with drag-and-drop, keyboard shortcuts, and team collaboration. Deployed as an internal tool at 3 companies.
-    </p>
-    <div class="project-links">
-      <a href="#" target="_blank">Live demo</a>
-      <a href="#" target="_blank">GitHub</a>
+    <div class="project-desc">
+      Social media platform with posts, likes, comments, and real-time features.
+      <ul>
+        <li>RESTful APIs with Spring Boot, integrated with Next.js frontend</li>
+        <li>Real-time notifications and messaging via WebSocket</li>
+        <li>Search with ElasticSearch, caching with Redis, async tasks with RabbitMQ</li>
+      </ul>
     </div>
   </div>
 
@@ -332,66 +305,48 @@
   <div class="section-title">Skills</div>
   <div class="skills-list">
     <div class="skill-group">
-      <div class="skill-group-name">Frontend</div>
-      <div class="skill-items">React, Next.js, Vue 3<br/>TypeScript, HTML/CSS<br/>Tailwind, Framer Motion</div>
+      <div class="skill-group-name">Languages</div>
+      <div class="skill-items">HTML/CSS/JavaScript<br/>Java, TypeScript</div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-name">Backend</div>
-      <div class="skill-items">Node.js, Express<br/>Python, FastAPI<br/>REST, GraphQL, WebSocket</div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-name">Database</div>
-      <div class="skill-items">PostgreSQL, MySQL<br/>MongoDB, Redis<br/>Prisma, SQLAlchemy</div>
+      <div class="skill-group-name">Frameworks</div>
+      <div class="skill-items">Next.js, Node.js, Express<br/>Spring Boot, React, React Native<br/>Material-UI, ShadcnUI</div>
     </div>
     <div class="skill-group">
       <div class="skill-group-name">Infra & Tools</div>
-      <div class="skill-items">AWS, Docker, Nginx<br/>GitHub Actions, CI/CD<br/>Git, Linux</div>
+      <div class="skill-items">Docker, Nginx, AWS EC2/S3<br/>Redis, RabbitMQ<br/>Git, Postman, Cloudflare</div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-name">Other</div>
+      <div class="skill-items">ElasticSearch, WebSocket<br/>Android Studio<br/>IntelliJ, Zed</div>
     </div>
   </div>
 
   <hr/>
 
-  <div class="section-title">Experience</div>
-
-  <div class="exp">
-    <div class="exp-header">
-      <span class="exp-title">Frontend Developer</span>
-      <span class="exp-period">2023 – present</span>
+  <div class="section-title">Education</div>
+  <div class="edu">
+    <div class="edu-header">
+      <span class="edu-school">Saigon University</span>
+      <span class="edu-period">Expected June 2027</span>
     </div>
-    <div class="exp-company">Acme Corp · Full-time</div>
-    <p class="exp-desc">Build and maintain customer-facing web apps used by 50,000+ users. Led a performance audit that reduced page load time by 40%.</p>
-  </div>
-
-  <div class="exp">
-    <div class="exp-header">
-      <span class="exp-title">Junior Web Developer</span>
-      <span class="exp-period">2021 – 2023</span>
-    </div>
-    <div class="exp-company">Startup XYZ · Full-time</div>
-    <p class="exp-desc">Built REST APIs and React dashboards for a B2B SaaS product. Shipped 3 major features contributing to 2× growth in paid subscribers.</p>
-  </div>
-
-  <div class="exp">
-    <div class="exp-header">
-      <span class="exp-title">Freelance Developer</span>
-      <span class="exp-period">2020 – 2021</span>
-    </div>
-    <div class="exp-company">Self-employed</div>
-    <p class="exp-desc">Delivered websites and web apps for 10+ small businesses. Stack: WordPress, Laravel, Vue.</p>
+    <div class="edu-degree">Software Engineering · GPA: 2.0/4.0</div>
+    <div class="edu-desc">OOP, Data Structures & Algorithms, Discrete Math, Linear Algebra, Calculus, Probability & Statistics</div>
   </div>
 
   <hr/>
 
   <div class="section-title">Contact</div>
   <p class="contact-line">
-    Open to full-time roles and freelance projects.<br/>
-    Reach me at <a href="mailto:alex@example.com">alex@example.com</a> or find me on
-    <a href="https://github.com" target="_blank">GitHub</a> and
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>.
+    Open to internships and collaborations.<br/>
+    Reach me at <a href="mailto:hoangquy3001@gmail.com">hoangquy3001@gmail.com</a><br/>
+    or find me on <a href="https://github.com/Hoang5433" target="_blank">GitHub</a>,
+    <a href="https://www.linkedin.com/in/ho%C3%A0ng-qu%C3%BD-2577762b6/" target="_blank">LinkedIn</a>,
+    and <a href="https://www.maintaindev.id.vn" target="_blank">maintaindev.id.vn</a>.
   </p>
 
   <footer>
-    <p>© 2026 Alex Nguyen</p>
+    <p>© 2026 Hoang Dinh Phu Quy</p>
   </footer>
 
 </div>
